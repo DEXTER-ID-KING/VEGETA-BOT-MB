@@ -1,5 +1,5 @@
-/* Código hecho por Destroy
- - https://github.com/The-King-Destroy
+/* Código hecho por Brayan
+ - https://github.com/BrayanOFC
 */
 
 let handler = async (m, { conn }) => {
