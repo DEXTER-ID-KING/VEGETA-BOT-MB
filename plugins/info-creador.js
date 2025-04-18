@@ -1,38 +1,34 @@
-// código creado por Deylin 
-// https://github.com/deylinqff
-// no quites créditos 
+//creado por github.com/BrayanOFC
+no quites creditos//
 
-import PhoneNumber from 'awesome-phonenumber';
+function handler(m) {
+let name = conn.getName(`${numcreador}@s.whatsapp.net`)
+let ownerN = `${numcreador}`
+conn.sendContact(m.chat, [[`${ownerN}@s.whatsapp.net`, `${name}`]], m, {
+ contextInfo: { 
+ forwardingScore: 2023,
+isForwarded: false, 
+ externalAdReply: {  
+ title: packname, 
+ body: dev, 
+ sourceUrl: channel,
+ thumbnail: banner,
+ thumbnailUrl: banner, 
+ mediaType: 1,
+ showAdAttribution: true, 
+ renderLargerThumbnail: true 
+ }
+   }
+     },
+       {
+         quoted: m
+           }
+             );
 
-async function handler(m, { conn }) { 
-    let numcreador = '526641804242'; 
-    let ownerJid = numcreador + '@s.whatsapp.net';
-
-   
-    let name = await conn.getName(ownerJid) || 'Brayan'; 
-    let about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || 'Sin descripción';
-
-
-    let vcard = `
-BEGIN:VCARD
-VERSION:3.0
-N:;${name};;;
-FN:${name}
-TEL;waid=${numcreador}:${new PhoneNumber('+' + numcreador).getNumber('international')}
-NOTE:${about}
-END:VCARD`.trim();
-
-
-    await conn.sendMessage(m.chat, { 
-        contacts: { 
-            displayName: name, 
-            contacts: [{ vcard }]
-        } 
-    }, { quoted: m });
 }
 
-handler.help = ['owner']; 
-handler.tags = ['main']; 
-handler.command = ['owner', 'creator', 'creador', 'dueño'];
+handler.help = ['owner']
+handler.tags = ['main']
+handler.command = ['owner', 'creator', 'creador', 'dueño'] 
 
-export default handler;
+export default handler
