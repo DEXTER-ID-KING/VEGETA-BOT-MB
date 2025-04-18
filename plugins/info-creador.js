@@ -1,5 +1,5 @@
 //creado por github.com/BrayanOFC
-no quites creditos//
+//no quites creditos
 
 function handler(m) {
 let name = conn.getName(`${numcreador}@s.whatsapp.net`)
