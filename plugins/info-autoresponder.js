@@ -1,5 +1,5 @@
-let handler = async (m, { conn, text, usedPrefix, command, isOwner, isAdmin, isROwner }) => {
-if (!(isOwner || isAdmin || isROwner)) {
+let handler = async (m, { conn, text, usedPrefix, command, isOwner, isuser, isRuser }) => {
+if (!(isuser || isuser || isROwner)) {
 conn.reply(m.chat, "🍧 Lo siento no puedes personalizar el autoresponder en este grupo/chat.", m)
 }
 const chatData = global.db.data.chats[m.chat]
