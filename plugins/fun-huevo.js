@@ -1,4 +1,4 @@
-//Codígo creado por Destroy wa.me/584120346669
+//Codígo creado por Brayan wa.me/526641804242
 
 const handler = async (m, { conn, usedPrefix, command, text }) => {
   let who;
