@@ -1,5 +1,4 @@
-//Codígo creado por Brayan
- wa.me/526641804242
+//Codígo creado por Brayan wa.me/526641804242
 
 import fs from 'fs';
 import path from 'path';
