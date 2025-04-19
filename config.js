@@ -25,7 +25,7 @@ global.owner = [
   ['50488198573', 'deylin', true], 
   ['5212431268546', 'Tesis', true],  
   ['50557865603', 'Niño piña', true], 
-  ['5218211111111', 'Papi chulo', true]
+  ['5218211111111', 'Papi chulo', true],
   ['5216632130871', 'antrua', true],
 ];
 
