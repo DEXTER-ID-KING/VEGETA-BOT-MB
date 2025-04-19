@@ -1,4 +1,4 @@
-onst handler = async (m, { conn, participants, groupMetadata }) => {
+const handler = async (m, { conn, participants, groupMetadata }) => {
   const { welcome, autolevelup, antiBot, antiBot2, autoAceptar, autoRechazar, autoresponder, modoadmin, reaction, nsfw, detect, antiLink, antitoxic, antiTraba, antifake } = global.db.data.chats[m.chat];
 
   const text = `👑 *ℂ𝕆ℕ𝔽𝕀𝔾𝕌ℝ𝔸ℂ𝕀𝕆ℕ 𝔻𝔼 𝔾ℝ𝕌ℙ𝕆* 
