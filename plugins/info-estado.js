@@ -1,4 +1,4 @@
-//Créditos 𝚅𝙴𝙶𝙴𝚃𝙰
+//Créditos BrayanOFC
 
 import ws from 'ws';
 
