@@ -82,10 +82,8 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const videoInfo =
-    const yt_play = await search(args.join(' '));
-const ytplay2 = await yts(text);
-const texto1 = `> *☆𝑽𝒆𝒈𝒆𝒕𝒂-𝑩𝒐𝒕-𝑴𝑩☆*\n\n> ☼︎ *𝑇𝑖𝑡𝑢𝑙𝑜:* ${yt_play[0].title}\n> ☼︎ *𝑃𝑢𝑏𝑙𝑖𝑐𝑎𝑑𝑜:* ${yt_play[0].ago}\n> ☼︎ *𝐷𝑢𝑟𝑎𝑐𝑖𝑜𝑛:* ${secondString(yt_play[0].duration.seconds)}\n> ☼︎ *𝑉𝑖𝑠𝑡𝑎𝑠:* ${MilesNumber(yt_play[0].views)}\n> ☼︎ *𝐴𝑢𝑡𝑜𝑟:* ${yt_play[0].author.name}\n> ☼︎ *𝑈𝑟𝑙:* ${yt_play[0].url.replace(/^https?:\/\//, '')}\n\n> *_𝐸𝑛𝑣𝑖𝑎𝑛𝑑𝑜 ${additionalText}, 𝑎𝑔𝑢𝑎𝑟𝑑𝑒 𝑢𝑛 𝑚𝑜𝑚𝑒𝑛𝑡𝑜 ᪥_*`.trim();
-
+       const videoInfo = search.all[0];
+  const body = `「✦」ძᥱsᥴᥲrgᥲᥒძ᥆ *<${videoInfo.title}>*\n\n> ✦ ᥴᥲᥒᥲᥣ » *${videoInfo.author.name || 'Desconocido'}*\n*°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°*\n> ✰ ᥎іs𝗍ᥲs » *${videoInfo.views}*\n*°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°*\n> ⴵ ძᥙrᥲᥴі᥆ᥒ » *${videoInfo.timestamp}*\n*°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°*\n> ✐ ⍴ᥙᑲᥣіᥴᥲძ᥆ » *${videoInfo.ago}*\n*°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°*\n> 🜸 ᥣіᥒk » ${videoInfo.url}\n`;
     const JT = {
       contextInfo: {
         externalAdReply: {
