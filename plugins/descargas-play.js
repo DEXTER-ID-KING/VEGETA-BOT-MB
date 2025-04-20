@@ -118,7 +118,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
               video: { url: downloadUrl },
               fileName: `${title}.mp4`,
               mimetype: "video/mp4",
-              caption: "⚔ Aquí tienes tu video descargado por *Kirito-Bot MD* ⚔",
+              caption: "• ᴀǫᴜɪ ᴛɪᴇɴᴇs ᴛᴜ ᴠɪᴅᴇᴏ ᴅᴇsᴄᴀʀɢᴀᴅᴏ ᴘᴏᴛ *𝚅𝙴𝙶𝙴𝚃𝙰-𝙱𝙾𝚃-𝙼𝙱* ⚔",
               thumbnail: thumb
             }, { quoted: fkontak });
             break;
