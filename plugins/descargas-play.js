@@ -80,7 +80,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       contextInfo: {
         externalAdReply: {
           title: "Vegeta-Bot MB 🤖",
-          body: "(1) Delos mejores Bots de WhatsApp",
+          body: "(1) ᴅᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ 𝚅𝙴𝙶𝙴𝚃𝙰-𝙱𝙾𝚃-𝙼𝙱",
           mediaType: 1,
           previewType: 0,
           mediaUrl: url,
