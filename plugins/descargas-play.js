@@ -82,10 +82,9 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const videoInfo = search.all[0];
-    const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
-    const vistas = formatViews(views);
-    const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${views}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n> 🜸 Link » ${url}\n`;
-       const thumb = (await conn.getFile(thumbnail))?.data;
+    const yt_play = await search(args.join(' '));
+const ytplay2 = await yts(text);
+const texto1 = `> *𑁍 𝑇ℎ𝑒-𝑀𝑖𝑘𝑢𝐵𝑜𝑡-𝑀𝐷𝑉2 𑁍*\n\n> ☼︎ *𝑇𝑖𝑡𝑢𝑙𝑜:* ${yt_play[0].title}\n> ☼︎ *𝑃𝑢𝑏𝑙𝑖𝑐𝑎𝑑𝑜:* ${yt_play[0].ago}\n> ☼︎ *𝐷𝑢𝑟𝑎𝑐𝑖𝑜𝑛:* ${secondString(yt_play[0].duration.seconds)}\n> ☼︎ *𝑉𝑖𝑠𝑡𝑎𝑠:* ${MilesNumber(yt_play[0].views)}\n> ☼︎ *𝐴𝑢𝑡𝑜𝑟:* ${yt_play[0].author.name}\n> ☼︎ *𝑈𝑟𝑙:* ${yt_play[0].url.replace(/^https?:\/\//, '')}\n\n> *_𝐸𝑛𝑣𝑖𝑎𝑛𝑑𝑜 ${additionalText}, 𝑎𝑔𝑢𝑎𝑟𝑑𝑒 𝑢𝑛 𝑚𝑜𝑚𝑒𝑛𝑡𝑜 ᪥_*`.trim();
 
     const JT = {
       contextInfo: {
