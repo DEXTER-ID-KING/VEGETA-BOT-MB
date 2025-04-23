@@ -5,14 +5,14 @@ import path from 'path';
 
 var handler = async (m, { usedPrefix, command }) => {
     try {
-        await m.react('🕒'); 
+        await m.react('🔥'); 
         conn.sendPresenceUpdate('composing', m.chat);
 
         const pluginsDir = './plugins';
 
         const files = fs.readdirSync(pluginsDir).filter(file => file.endsWith('.js'));
 
-        let response = `❀ *Revisión de Syntax Errors:*\n\n`;
+        let response = `🔥 *ℝ𝔼𝕍𝕀𝕊𝕀𝕆ℕ 𝔻𝔼 𝕊𝕐ℕ𝕋𝔸𝕏 𝔼ℝℝ𝕆ℝ𝕊:*\n\n`;
         let hasErrors = false;
 
         for (const file of files) {
@@ -25,11 +25,11 @@ var handler = async (m, { usedPrefix, command }) => {
         }
 
         if (!hasErrors) {
-            response += '✐ ¡Todo está en orden! No se detectaron errores de sintaxis.';
+            response += '👁️ ¡𝑻𝑶𝑫𝑶 𝑬𝑺𝑻𝑨 𝑬𝑵 𝑶𝑹𝑫𝑬𝑵! 𝑵𝑶 𝑺𝑬 𝑫𝑬𝑻𝑬𝑪𝑻𝑨𝑹𝑶𝑴 𝑬𝑹𝑹𝑶𝑹𝑬𝑺 𝑫𝑬 𝑺𝑰𝑵𝑻𝑨𝑿𝑰𝑺.';
         }
 
         await conn.reply(m.chat, response, m);
-        await m.react('🌸');
+        await m.react('🔥');
     } catch (err) {
         await m.react('✖️'); 
         console.error(err);
