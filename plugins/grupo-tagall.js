@@ -1,33 +1,39 @@
 /* 
-- tagall By Angel-OFC  
-- etiqueta en un grupo a todos
+- Setemoji By Angel-OFC 
+- edita el tagall con tu emoji favorito 
 - https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
 */
-const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command, usedPrefix }) => {
-  if (usedPrefix == 'a' || usedPrefix == 'A') return;
+let handler = async (m, { conn, text, isRowner }) => {
 
-  const customEmoji = global.db.data.chats[m.chat]?.customEmoji || '💪';
-  m.react(customEmoji);
-
-  if (!(isAdmin || isOwner)) {
-    global.dfail('admin', m, conn);
-    throw false;
+  if (!text) {
+    return m.reply(`${emoji} Debes proporcionar un emoji válido después del comando. Ejemplo: .setemoji ${emoji2}`);
   }
 
-  const pesan = args.join` `;
-  const oi = `*» INFO :* ${pesan}`;
-  let teks = `*!  MENCION GENERAL  !*\n  *PARA ${participants.length} MIEMBROS* 🗣️\n\n ${oi}\n\n╭  ┄ 𝅄 ۪꒰ \`⡞᪲=͟͟͞${botname} ≼᳞ׄ\` ꒱ ۟ 𝅄 ┄\n`;
-  for (const mem of participants) {
-    teks += `┊${customEmoji} @${mem.id.split('@')[0]}\n`;
-  }
-  teks += `╰⸼ --- --- --- -  ꒰  ׅ୭ *${vs}* ୧ ׅ ꒱  ---  - --- ⸼`;
+  const emoji = text.trim();
 
-  conn.sendMessage(m.chat, { text: teks, mentions: participants.map((a) => a.id) });
+  if (!isEmoji(emoji)) {
+    return m.reply(`${emoji} El texto proporcionado no es un emoji válido. Asegúrate de que sea un emoji real.`);
+  }
+
+  try {
+    global.db.data.chats[m.chat].customEmoji = emoji;
+
+    m.reply(`${emoji2} El emoji del grupo ha sido actualizado correctamente a: ${emoji}`);
+  } catch (error) {
+    console.error(error);
+    m.reply(`${msm} Hubo un error al intentar cambiar el emoji.`);
+  }
 };
 
-handler.help = ['todos *<mensaje opcional>*'];
+const isEmoji = (text) => {
+  const emojiRegex =
+    /(?:\p{Emoji_Presentation}|\p{Extended_Pictographic}|\p{Emoji})/gu;
+  return emojiRegex.test(text) && text.length <= 2;
+};
+
+handler.help = ['setemoji *<emoji>*'];
 handler.tags = ['group'];
-handler.command = ['todos', 'invocar', 'tagall']
+handler.command = ['setemoji', 'setemo'];
 handler.admin = true;
 handler.group = true;
 
