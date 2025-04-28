@@ -1,4 +1,4 @@
-// Alex-X >> https://github.com/BrayanOFC
+// BrayanOFC >> https://github.com/BrayanOFC
 
 import fs from 'fs';
 import path from 'path';
