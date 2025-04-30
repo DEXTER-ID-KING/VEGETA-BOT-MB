@@ -30,8 +30,7 @@ let perfil = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://file
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 const vid = ['https://files.catbox.moe/b5kle9.mp4', 'https://files.catbox.moe/b5kle9.mp4', 'https://files.catbox.moe/b5kle9.mp4']
 
-let menu = 
-'╭━━❍ VEGETABOT
+let menu =`*╭━━❍ VEGETABOT
 *┣━━━▢ ❤𝐇𝐎𝐋𝐀, ${*name*} ❤*• 
 *┃╭━━━━━━━━━━━━━━━━╾•* 
 *┃┃  ${greeting} 
