@@ -1,39 +1,33 @@
 /* 
-- Setemoji By Angel-OFC 
-- edita el tagall con tu emoji favorito 
+- tagall By Angel-OFC  
+- etiqueta en un grupo a todos
 - https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
 */
-let handler = async (m, { conn, text, isRowner }) => {
+const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command, usedPrefix }) => {
+  if (usedPrefix == 'a' || usedPrefix == 'A') return;
 
-  if (!text) {
-    return m.reply(`${emoji} Debes proporcionar un emoji válido después del comando. Ejemplo: .setemoji ${emoji2}`);
+  const customEmoji = global.db.data.chats[m.chat]?.customEmoji || '👄';
+  m.react(customEmoji);
+
+  if (!(isAdmin || isOwner)) {
+    global.dfail('admin', m, conn);
+    throw false;
   }
 
-  const emoji = text.trim();
-
-  if (!isEmoji(emoji)) {
-    return m.reply(`${emoji} El texto proporcionado no es un emoji válido. Asegúrate de que sea un emoji real.`);
+  const pesan = args.join` `;
+  const oi = `*» INFO :* ${pesan}`;
+  let teks = `*!  MENCION GENERAL  !*\n  *PARA ${participants.length} MIEMBROS* 👁️\n\n ${oi}\n\n╭  ┄ 𝅄 ۪꒰ \`⡞᪲=͟͟͞${botname} ≼᳞ׄ\` ꒱ ۟ 𝅄 ┄\n`;
+  for (const mem of participants) {
+    teks += `┊${customEmoji} @${mem.id.split('@')[0]}\n`;
   }
+  teks += `╰⸼ ┄ ┄ ┄ ─  ꒰  ׅ୭ *${vs}* ୧ ׅ ꒱  ┄  ─ ┄ ⸼`;
 
-  try {
-    global.db.data.chats[m.chat].customEmoji = emoji;
-
-    m.reply(`${emoji2} El emoji del grupo ha sido actualizado correctamente a: ${emoji}`);
-  } catch (error) {
-    console.error(error);
-    m.reply(`${msm} Hubo un error al intentar cambiar el emoji.`);
-  }
+  conn.sendMessage(m.chat, { text: teks, mentions: participants.map((a) => a.id) });
 };
 
-const isEmoji = (text) => {
-  const emojiRegex =
-    /(?:\p{Emoji_Presentation}|\p{Extended_Pictographic}|\p{Emoji})/gu;
-  return emojiRegex.test(text) && text.length <= 2;
-};
-
-handler.help = ['setemoji *<emoji>*'];
+handler.help = ['todos *<mensaje opcional>*'];
 handler.tags = ['group'];
-handler.command = ['setemoji', 'setemo'];
+handler.command = ['todos', 'invocar', 'tagall']
 handler.admin = true;
 handler.group = true;
 
