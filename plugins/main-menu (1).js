@@ -32,11 +32,11 @@ const vid = ['https://files.catbox.moe/13nqyi.mp4', 'https://files.catbox.moe/13
 
 let menu = `
 *╭━━❍ VEGETABOT
-*┣━━━▢ ❤𝐇𝐎𝐋𝐀, *%name* ❤*• 
+*┣━━━▢ 👁️𝐇𝐎𝐋𝐀, *%name* 👁️*• 
 *┃╭━━━━━━━━━━━━━━━━╾•* 
 *┃┃  %greeting* 
 *┃┣━━━━━━━━━━━━━━━━╾•* 
-*┃┃ ⋄ *𝗢𝗪𝗡𝗘𝗥:* ᴠᴇɢᴇᴛᴀ
+*┃┃ ⋄ *𝐂𝐑𝐄𝐀𝐃𝐎𝐑:* ʙʀᴀʏᴀɴᴏғᴄ
 *┃┃ ⋄ׁ *𝙈𝙊𝘿𝙊:* Público
 *┃┃ ⋄ *𝘽𝘼𝙔𝙇𝙀𝙔𝙎:* Multi Device
 *┃┃ ⋄ *𝘼𝘾𝙏𝙄𝙑𝙊:* %muptime
