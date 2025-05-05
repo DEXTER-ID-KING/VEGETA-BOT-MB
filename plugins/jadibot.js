@@ -1,4 +1,4 @@
-import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync, promises as fsPromises } from "fs";
+LISTA💫💫💫t { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync, promises as fsPromises } from "fs";
 const fs = { ...fsPromises, existsSync };
 import path, { join } from 'path' 
 import ws from 'ws';
@@ -67,10 +67,10 @@ resultado += segundos + " segundos";
 }
 return resultado;
 }
-const message = users.map((v, index) => `• 「 ${index + 1} 」\n📎 Wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n👤 Usuario: ${v.user.name || 'Sub-Bot'}\n🕑 Online: ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : 'Desconocido'}`).join('\n\n__________________________\n\n');
+const message = users.map((v, index) => `• 「 ${index + 1} 」\n📎 Wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}serbot code\n👤 Usuario: ${v.user.name || 'Sub-Bot'}\n🕑 Online: ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : 'Desconocido'}`).join('\n\n__________________________\n\n');
 const replyMessage = message.length === 0 ? `No hay Sub-Bots disponible por el momento, verifique mas tarde.` : message;
 const totalUsers = users.length;
-const responseMessage = `🍬 LISTA DE *SUB-BOTS* ACTIVOS\n\n🍭 PUEDES PEDIR PERMISO PARA QUE TE DEJEN UNIR EL BOT A TÚ GRUPO\n\n\`\`\`CADA USUARIO SUB-BOT USA SUS FUNCIONES COMO QUIERA, EL NÚMERO PRINCIPAL NO SE HACE RESPONSABLE DEL USO DEL MAL USO DE ELLA \`\`\`\n\n*SUB-BOT CONECTADOS:* ${totalUsers || '0'}\n\n${replyMessage.trim()}`.trim();
+const responseMessage = `💫 LISTA DE *SUB-BOTS* ACTIVOS\n\n\`\`\`𝐂𝐀𝐃𝐀 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐒𝐔𝐁-𝐁𝐎𝐓 𝐔𝐒𝐀 𝐒𝐔𝐒 𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐄𝐃 𝐂𝐎𝐌𝐎 𝐐𝐔𝐈𝐄𝐑𝐀, 𝐄𝐋 𝐍𝐔𝐌𝐄𝐑𝐎 𝐏𝐑𝐈𝐍𝐂𝐈𝐏𝐀𝐋 𝐍𝐎 𝐒𝐄 𝐇𝐀𝐂𝐄 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐀𝐁𝐋𝐄 𝐃𝐄𝐋 𝐌𝐀𝐋 𝐔𝐒𝐎 𝐃𝐄 𝐄𝐋 \`\`\`\n\n*𝑺𝑼𝑩-𝑩𝑶𝑻𝑺 𝑪𝑶𝑵𝑬𝑪𝑻𝑨𝑫𝑶𝑺:* ${totalUsers || '0'}\n\n${replyMessage.trim()}`.trim();
 await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m})
 break   
 }}
