@@ -76,7 +76,7 @@ vegetaJBOptions.command = command
 vegetaJadiBot(vegetaJBOptions)
 global.db.data.users[m.sender].Subs = new Date * 1
 } 
-handler.help = ['serbot', 'serbot code']
+handler.help = ['serbot', 'code]
 handler.tags = ['serbot']
 handler.command = ['jadibot', 'serbot']
 export default handler 
