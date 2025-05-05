@@ -78,7 +78,7 @@ global.db.data.users[m.sender].Subs = new Date * 1
 } 
 handler.help = ['serbot', 'code']
 handler.tags = ['serbot']
-handler.command = ['jadibot', 'serbot']
+handler.command = ['jadibot', 'code']
 export default handler 
 
 export async function vegetaJadiBot(options) {
