@@ -78,4 +78,4 @@ await this.reply(m.chat, result, m)
 }}}
 return true
 }
-export default handler
+export default handle
