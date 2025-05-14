@@ -82,7 +82,7 @@ vegeta += `╭─⬣「 *NodeJS Uso de memoria* 」⬣\n`
 vegera += `${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}\n`
 vegeta += `╰─⬣`
 
-await conn.reply(m.chat, kirito, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'] }})
+await conn.reply(m.chat, vegeta, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'] }})
 }
 handler.help = ['infobot']
 handler.tags = ['info']
