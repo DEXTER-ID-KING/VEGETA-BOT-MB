@@ -1,5 +1,5 @@
 function enviarNumeroCreador() {
-  const numeroCreador = "+52XXXXXXXXXX"; // Reemplaza con el número del creador
+  const numeroCreador = "+526633900512"; // Reemplaza con el número del creador
 
   const mensaje = `El número del creador es: ${numeroCreador}`;
 
